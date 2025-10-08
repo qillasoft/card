@@ -244,7 +244,7 @@ body {
             
             /* Force background images untuk print */
             .card-front {
-                background-image: url('https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/nuptk_front.jpg') !important;
+                background-image: url('img/nuptk_front.jpg') !important;
                 background-size: cover !important;
                 background-position: center !important;
                 background-repeat: no-repeat !important;
@@ -254,7 +254,7 @@ body {
             }
             
             .card-back {
-                background-image: url('https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/nuptk_back.jpg') !important;
+                background-image: url('img/nuptk_back.jpg') !important;
                 background-size: cover !important;
                 background-position: center !important;
                 background-repeat: no-repeat !important;
@@ -263,7 +263,7 @@ body {
             }
             
             .card-photo {
-                background-image: url('https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/etc_foto_70x105px.jpg') !important;
+                background-image: url('img/etc_foto_70x105px.jpg') !important;
                 background-size: cover !important;
                 background-position: center !important;
                 background-repeat: no-repeat !important;
