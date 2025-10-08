@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Kartu NUPTK</title>
+    <link rel="stylesheet" href="cnf_style.css">
+    <script src="qrcode.js"></script>
+    <script src="cnf_script.js"></script>
+</head>
+    
+<body>
+    <!-- Hanya page-container yang akan tercetak -->
+    <div class="page-container">
+      <p><b>Kartu NUPTK</b></p>
+        
+        <div class="cards-container">
+            <div class="card card-front" id="previewCardFront">
+                <!-- Foto di kiri bawah -->
+                <img id="previewPhoto" class="card-photo" src="" alt=" ">
+                
+                <!-- Data di tengah (rata kiri) -->
+                <div class="data-container">
+                    <div class="data-row-nuptk">
+                        <div class="data-label">NUPTK</div>
+                        <div class="data-colon">:</div>
+                        <div id="previewNuptk" class="data-value empty-state">16 digit</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-label">Nama</div>
+                        <div class="data-colon">:</div>
+                        <div id="previewNama" class="data-value empty-state">Nama Lengkap</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-label">Tanggal Lahir</div>
+                        <div class="data-colon">:</div>
+                        <div id="previewTgl" class="data-value empty-state">Tanggal Lahir</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-label">Tempat Lahir</div>
+                        <div class="data-colon">:</div>
+                        <div id="previewTl" class="data-value empty-state">Tempat Lahir</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-label">Jenis Kelamin</div>
+                        <div class="data-colon">:</div>
+                        <div id="previewJk" class="data-value empty-state">Jenis Kelamin</div>
+                    </div>
+                </div>
+                
+                <!-- QR Code di kanan bawah -->
+                <div class="qrcode" id="previewQrCode">
+                    <canvas id="previewCanvas"></canvas>
+                </div>
+            </div>
+            
+            <div class="card card-back" id="previewCardBack">
+                <!-- Sisi belakang kartu - kosong -->
+            </div>
+        </div>
+        
+        <div class="creator-info">
+            Created by: QILLASOFT
+        </div>
+
+        <!-- Tombol Print - tidak akan tercetak -->
+        <button class="print-button" onclick="printKartu()">🖨️ Print Kartu</button>
+    </div>
+</body>
+</html>
