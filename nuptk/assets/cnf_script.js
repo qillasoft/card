@@ -1,7 +1,7 @@
 // URL background dari halaman utama
-        const BACKGROUND_FRONT = 'https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/nuptk_front.jpg';
-        const BACKGROUND_BACK = 'https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/nuptk_back.jpg';
-        const DEFAULT_PHOTO_BG = 'https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/etc_foto_70x105px.jpg';
+        const BACKGROUND_FRONT = 'img/nuptk_front.jpg';
+        const BACKGROUND_BACK = 'img/nuptk_back.jpg';
+        const DEFAULT_PHOTO_BG = 'img/etc_foto_70x105px.jpg';
 
         // Fungsi untuk mengambil data dari URL parameter
         function getUrlParams() {
