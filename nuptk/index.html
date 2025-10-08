@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kartu NUPTK</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/qrcode.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="qrcode.js"></script>
 </head>
 
 <body>
@@ -427,7 +427,7 @@
                 params.append('photo', cardData.photo);
             }
             
-            const previewUrl = `assets/confirm.html?${params.toString()}`;
+            const previewUrl = `confirm.html?${params.toString()}`;
             
             window.open(previewUrl, '_blank');
         }
@@ -443,7 +443,7 @@
             
             // Clear photo dan kembalikan background image
             cardPhoto.src = '';
-            cardPhoto.style.backgroundImage = 'url("assets/img/etc_foto_70x105px.jpg")';
+            cardPhoto.style.backgroundImage = 'url("https://cdn.jsdelivr.net/gh/qillasoft/card@master/nuptk/img/etc_foto_70x105px.jpg")';
             currentPhotoFile = null;
             uploadText.textContent = 'Klik atau seret file ke sini untuk mengunggah foto';
             fileInfo.innerHTML = '';
