@@ -300,7 +300,7 @@
                 params.append('photo', cardData.photo);
             }
             
-            const previewUrl = `https://qillasoft.blogspot.com/p/preview-kartu-nuptk.html?${params.toString()}`;
+            const previewUrl = `confirm.html?${params.toString()}`;
             
             window.open(previewUrl, '_blank');
         }
@@ -316,7 +316,7 @@
             
             // Clear photo dan kembalikan background image
             cardPhoto.src = '';
-            cardPhoto.style.backgroundImage = 'url("https://cdn.jsdelivr.net/gh/qillasoft/card@master/img/etc_foto_70x105px.jpg")';
+            cardPhoto.style.backgroundImage = 'url("img/etc_foto_70x105px.jpg")';
             currentPhotoFile = null;
             uploadText.textContent = 'Klik atau seret file ke sini untuk mengunggah foto';
             fileInfo.innerHTML = '';
