@@ -1,5 +1,5 @@
 /* Input field */
-        #nuptk_card .inF {
+        #nuptk-card .inF {
             --iB: var(--bodyB);
             --iC: inherit;
             --iL: var(--contentLa);
@@ -15,7 +15,7 @@
             margin: 20px 0;
         }
         
-        #nuptk_card .inF input, #nuptk_card .inF select, #nuptk_card .inF textarea {
+        #nuptk-card .inF input, #nuptk-card .inF select, #nuptk-card .inF textarea {
             display: block;
             width: 100%;
             height: 50px;
@@ -30,7 +30,7 @@
             transition: border .2s ease,box-shadow .2s ease;
         }
         
-        #nuptk_card .inF select {
+        #nuptk-card .inF select {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
@@ -39,7 +39,7 @@
             cursor: pointer;
         }
         
-        #nuptk_card .inF textarea {
+        #nuptk-card .inF textarea {
             vertical-align: top;
             resize: vertical;
             min-height: 60px;
@@ -49,17 +49,17 @@
             margin: 0;
         }
         
-        #nuptk_card .inF textarea:focus, #nuptk_card .inF textarea:not(:placeholder-shown):not(:focus) {
+        #nuptk-card .inF textarea:focus, #nuptk-card .inF textarea:not(:placeholder-shown):not(:focus) {
             height: var(--tHa);
         }
         
-        #nuptk_card .inF input[type=date]::-webkit-date-and-time-value, #nuptk_card .inF input[type=datetime-local]::-webkit-date-and-time-value {
+        #nuptk-card .inF input[type=date]::-webkit-date-and-time-value, #nuptk-card .inF input[type=datetime-local]::-webkit-date-and-time-value {
             margin-top: 0;
             text-align: start;
             width: 100%;
         }
         
-        #nuptk_card .inF input[type=date]::after, #nuptk_card .inF input[type=datetime-local]::after {
+        #nuptk-card .inF input[type=date]::after, #nuptk-card .inF input[type=datetime-local]::after {
             content: '';
             position: absolute;
             top: 18px;
@@ -69,22 +69,22 @@
             background: inherit;
         }
         
-        #nuptk_card .inF input:not([readonly]):focus, #nuptk_card .inF select:not([readonly]):focus, #nuptk_card .inF textarea:not([readonly]):focus {
+        #nuptk-card .inF input:not([readonly]):focus, #nuptk-card .inF select:not([readonly]):focus, #nuptk-card .inF textarea:not([readonly]):focus {
             border-color: var(--iLa);
             box-shadow: inset 0 0 0 .5px var(--iLa);
         }
         
-        #nuptk_card .inF input:placeholder-shown, #nuptk_card .inF label, #nuptk_card .inF textarea:placeholder-shown {
+        #nuptk-card .inF input:placeholder-shown, #nuptk-card .inF label, #nuptk-card .inF textarea:placeholder-shown {
             -webkit-user-select: none;
             -ms-user-select: none;
             user-select: none;
         }
         
-        #nuptk_card .inF input:not(:placeholder-shown), #nuptk_card .inF select:not(:placeholder-shown), #nuptk_card .inF textarea:not(:placeholder-shown), #nuptk_card .inF input[type=date], #nuptk_card .inF input[type=datetime-local] {
+        #nuptk-card .inF input:not(:placeholder-shown), #nuptk-card .inF select:not(:placeholder-shown), #nuptk-card .inF textarea:not(:placeholder-shown), #nuptk-card .inF input[type=date], #nuptk-card .inF input[type=datetime-local] {
             border-color: var(--iLa);
         }
         
-        #nuptk_card .inF label {
+        #nuptk-card .inF label {
             font-size: 14px;
             position: absolute;
             top: 17px;
@@ -103,13 +103,13 @@
             pointer-events: none;
         }
         
-        #nuptk_card .inF input[required] ~ label::after, #nuptk_card .inF select[required] ~ label::after, #nuptk_card .inF textarea[required] ~ label::after {
+        #nuptk-card .inF input[required] ~ label::after, #nuptk-card .inF select[required] ~ label::after, #nuptk-card .inF textarea[required] ~ label::after {
             content: '*';
             color: #cb5151;
             margin-inline-start: 4px;
         }
         
-        #nuptk_card .inF input:not([readonly]):focus ~ label, #nuptk_card .inF select:not([readonly]):focus ~ label, #nuptk_card .inF textarea:not([readonly]):focus ~ label, #nuptk_card .inF input:not(:placeholder-shown):not(:focus) ~ label, #nuptk_card .inF select:not(:placeholder-shown):not(:focus) ~ label, #nuptk_card .inF textarea:not(:placeholder-shown):not(:focus) ~ label, #nuptk_card .inF input[readonly]:not(:placeholder-shown) ~ label, #nuptk_card .inF select[readonly]:not(:placeholder-shown) ~ label, #nuptk_card .inF textarea[readonly]:not(:placeholder-shown) ~ label {
+        #nuptk-card .inF input:not([readonly]):focus ~ label, #nuptk-card .inF select:not([readonly]):focus ~ label, #nuptk-card .inF textarea:not([readonly]):focus ~ label, #nuptk-card .inF input:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card .inF select:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card .inF textarea:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card .inF input[readonly]:not(:placeholder-shown) ~ label, #nuptk-card .inF select[readonly]:not(:placeholder-shown) ~ label, #nuptk-card .inF textarea[readonly]:not(:placeholder-shown) ~ label {
             opacity: 1;
             top: -6px;
             inset-inline-start: 8px;
@@ -117,18 +117,18 @@
             color: var(--iLa);
         }
         
-        #nuptk_card .inF[data-error]:not([data-error='']) {
+        #nuptk-card .inF[data-error]:not([data-error='']) {
             --iL: var(--iLe);
             --iLa: var(--iLe);
             animation: shake-input-error .35s ease;
         }
         
-        #nuptk_card .inF[data-info]:not([data-info='']) {
+        #nuptk-card .inF[data-info]:not([data-info='']) {
             --iL: var(--iLi);
             --iLa: var(--iLi);
         }
         
-        #nuptk_card .inF[data-error]:not([data-error=''])::after, #nuptk_card .inF[data-info]:not([data-info=''])::after, #nuptk_card .inF[data-message]:not([data-message=''])::after {
+        #nuptk-card .inF[data-error]:not([data-error=''])::after, #nuptk-card .inF[data-info]:not([data-info=''])::after, #nuptk-card .inF[data-message]:not([data-message=''])::after {
             content: attr(data-message);
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -141,12 +141,12 @@
             overflow: hidden;
         }
         
-        #nuptk_card .inF[data-error]:not([data-error=''])::after {
+        #nuptk-card .inF[data-error]:not([data-error=''])::after {
             content: attr(data-error);
             color: var(--iLe);
         }
         
-        #nuptk_card .inF[data-info]:not([data-info=''])::after {
+        #nuptk-card .inF[data-info]:not([data-info=''])::after {
             content: attr(data-info);
             color: var(--iLi);
         }
@@ -164,14 +164,14 @@
         }
         
         
-        #nuptk_card {
+        #nuptk-card {
             --primary-color: #27ae60;
             --danger-color: #e74c3c;
             --gray-color: #95a5a6;
             --border-color: #ddd;
         }
         
-        #nuptk_card .content-wrapper {
+        #nuptk-card .content-wrapper {
             display: flex;
             flex-wrap: wrap;
             background: transparent;
@@ -180,23 +180,23 @@
             overflow: hidden;
         }
         
-         #nuptk_card .form-section, #nuptk_card .preview-section {
+         #nuptk-card .form-section, #nuptk-card .preview-section {
             flex: 1;
             min-width: 300px;
             padding: 20px;
         }
         
-        #nuptk_card .form-group {
+        #nuptk-card .form-group {
             margin-bottom: 20px;
         }
         
-        #nuptk_card label {
+        #nuptk-card label {
             display: block;
             margin-bottom: 8px;
             font-size: 16px;           
         }
         
-        #nuptk_card .form-group input, #nuptk_card .form-group select {
+        #nuptk-card .form-group input, #nuptk-card .form-group select {
             font-size: 14px;
             color: #424242;
             width: 100%;
@@ -206,13 +206,13 @@
             transition: border-color 0.3s;
         }
         
-        #nuptk_card .form-group input:focus, #nuptk_card .form-group select:focus {
+        #nuptk-card .form-group input:focus, #nuptk-card .form-group select:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
         }        
         
-        #nuptk_card .upload-area {
+        #nuptk-card .upload-area {
             border: 2px dashed var(--border-color);
             border-radius: 5px;
             padding: 20px;
@@ -221,44 +221,44 @@
             transition: all 0.3s;
         }
         
-        #nuptk_card .upload-area:hover {
+        #nuptk-card .upload-area:hover {
             border-color: var(--primary-color);
             background-color: rgba(39, 174, 96, 0.05);
         }
         
-        #nuptk_card .upload-area.dragover {
+        #nuptk-card .upload-area.dragover {
             border-color: var(--primary-color);
             background-color: rgba(39, 174, 96, 0.1);
         }
         
-        #nuptk_card .txtupl {
+        #nuptk-card .txtupl {
             font-size: 14px;
         }
         
-        #nuptk_card .file-info {
+        #nuptk-card .file-info {
             font-size: 14px;
             color: var(--primary-color);
         }
         
-        #nuptk_card .file-error {
+        #nuptk-card .file-error {
             font-size: 14px;
             color: var(--danger-color);
         }
         
-        #nuptk_card .preview-section {
+        #nuptk-card .preview-section {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         
-        #nuptk_card .jdlpreview {
+        #nuptk-card .jdlpreview {
             display: block;
             margin-bottom: 8px;
             font-size: 16px;
             text-align: center;
         }
         
-        #nuptk_card #cardPreview {
+        #nuptk-card #cardPreview {
             width: 320px;
             height: 200px;
             border: 1px solid var(--gray-color);
@@ -275,7 +275,7 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .card-photo {
+        #nuptk-card .card-photo {
             width: 71px;
             height: 107px;
             object-fit: cover;
@@ -284,14 +284,14 @@
             bottom: 16.5px;
         }
         
-        #nuptk_card .data-container {
+        #nuptk-card .data-container {
             margin-top: 85px;
             margin-left: 93px;
             margin-right: 4.5px;
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .data-row-nuptk {
+        #nuptk-card .data-row-nuptk {
             display: flex;
             margin-bottom: 4px;
             font-size: 10px;
@@ -302,7 +302,7 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .data-row {
+        #nuptk-card .data-row {
             display: flex;
             margin-bottom: 4px;
             font-size: 10px;
@@ -312,7 +312,7 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .data-label {
+        #nuptk-card .data-label {
             width: 70px;
             text-align: left;
             color: #000000;
@@ -320,7 +320,7 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .data-colon {
+        #nuptk-card .data-colon {
             width: 5px;
             color: #000000;
             flex-shrink: 0;
@@ -328,7 +328,7 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .data-value {
+        #nuptk-card .data-value {
             color: #000000;
             flex: 1;
             white-space: nowrap;
@@ -337,21 +337,21 @@
             font-family: Helvetica, Arial, sans-serif;
         }
         
-        #nuptk_card .empty-state {
+        #nuptk-card .empty-state {
             color: #757575;
             font-size: 9px;
             font-style: italic;
         }
         
-        #nuptk_card .long-text {
+        #nuptk-card .long-text {
             font-size: 9px !important;
         }
         
-        #nuptk_card .very-long-text {
+        #nuptk-card .very-long-text {
             font-size: 8px !important;
         }
         
-        #nuptk_card .qrcode {
+        #nuptk-card .qrcode {
             width: 41px;
             height: 41px;
             border: 1px solid var(--border-color);
@@ -364,17 +364,17 @@
             background: white;
         }
         
-        #nuptk_card .qrcode canvas {
+        #nuptk-card .qrcode canvas {
             width: 41px !important;
             height: 41px !important;
         }
         
-        #nuptk_card .back-preview-section {
+        #nuptk-card .back-preview-section {
             margin-top: 5px;
             text-align: center;
         }
 
-        #nuptk_card #cardBackPreview {
+        #nuptk-card #cardBackPreview {
             width: 320px;
             height: 200px;
             border: 1px solid var(--gray-color);
@@ -389,14 +389,14 @@
             border-radius: 8px;
         }
         
-        #nuptk_card .ftrpreview {
+        #nuptk-card .ftrpreview {
             display: block;
             font-size: 14px;
             color: #00B8D4;
             text-align: center;
         }
         
-        #nuptk_card .button-group {
+        #nuptk-card .button-group {
             display: flex;
             gap: 20px;
             margin-top: 20px;
@@ -404,7 +404,7 @@
             flex-wrap: wrap;
         }
         
-        #nuptk_card .btn-crop {
+        #nuptk-card .btn-crop {
             padding: 12px 20px;
             border: none;
             border-radius: 5px;
@@ -417,19 +417,19 @@
             text-align: center;
         }
         
-        #nuptk_card .btn-crop:enabled:hover {
+        #nuptk-card .btn-crop:enabled:hover {
             background: #2962FF;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        #nuptk_card .btn-crop:disabled {
+        #nuptk-card .btn-crop:disabled {
             cursor: not-allowed;
             opacity: 0.6;
             background: var(--gray-color);
         }
         
-        #nuptk_card .btn-clear {
+        #nuptk-card .btn-clear {
             padding: 12px 20px;
             border: none;
             border-radius: 5px;
@@ -442,13 +442,13 @@
             text-align: center;
         }
         
-        #nuptk_card .btn-clear:hover {
+        #nuptk-card .btn-clear:hover {
             background-color: #D32F2F;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        #nuptk_card .btn-download {
+        #nuptk-card .btn-download {
             padding: 12px 20px;
             border: none;
             border-radius: 5px;
@@ -461,26 +461,26 @@
             text-align: center;
         }
         
-        #nuptk_card .btn-download:enabled:hover {
+        #nuptk-card .btn-download:enabled:hover {
             background: #6200EA;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         
-        #nuptk_card .btn-download:disabled {
+        #nuptk-card .btn-download:disabled {
             cursor: not-allowed;
             opacity: 0.6;
             background: var(--gray-color);
         }
         
         /* Loading indicator */
-        #nuptk_card .loading {
+        #nuptk-card .loading {
             display: none;
             text-align: center;
             margin: 10px 0;
         }
         
-        #nuptk_card .loading-spinner {
+        #nuptk-card .loading-spinner {
             border: 4px solid #f3f3f3;
             border-top: 4px solid var(--primary-color);
             border-radius: 50%;
@@ -491,7 +491,7 @@
         }
         
         /* Peringatan ukuran foto */
-        #nuptk_card .photo-size-warning {
+        #nuptk-card .photo-size-warning {
             color: var(--danger-color);
             font-size: 14px;
             display: none;
@@ -507,30 +507,30 @@
             100% { transform: rotate(360deg); }
         }
            
-        #nuptk_card .validation-message {
+        #nuptk-card .validation-message {
             font-size: 14px;
             display: none;
         }
         
-        #nuptk_card .validation-error {
+        #nuptk-card .validation-error {
             color: var(--danger-color);
         }
         
-        #nuptk_card .validation-success {
+        #nuptk-card .validation-success {
             color: var(--primary-color);
         }
         
         @media (max-width: 768px) {
-            #nuptk_card .content-wrapper {
+            #nuptk-card .content-wrapper {
                 flex-direction: column;
             }
             
-            #nuptk_card .form-section, #nuptk_card .preview-section {
+            #nuptk-card .form-section, #nuptk-card .preview-section {
                 width: 100%;
             }
         }
         
-        #nuptk_card .infoa {
+        #nuptk-card .infoa {
             text-align: justify;
             background: rgba(255,255,255,0.1);
             padding: 10px;
@@ -541,7 +541,7 @@
         }
         
         /* Note */
-        #nuptk_card .info {
+        #nuptk-card .info {
             position: relative;
             padding-block: 16px;
             padding-inline: 50px 20px;
@@ -553,7 +553,7 @@
             text-align: center;
         }
         
-        #nuptk_card .info::before {
+        #nuptk-card .info::before {
             content: '';
             width: 60px;
             height: 60px;
@@ -566,7 +566,7 @@
             opacity: .1;
         }
         
-        #nuptk_card .info::after {
+        #nuptk-card .info::after {
             content: '\002A';
             position: absolute;
             inset-inline-start: 18px;
@@ -576,7 +576,7 @@
             text-align: center;
         }
         
-        #nuptk_card .info.wr::after {
+        #nuptk-card .info.wr::after {
             content: '\0021';
             color: #e74c3c;
         }
