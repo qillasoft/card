@@ -1,5 +1,4 @@
-<style>
-        /* Input field */
+/* Input field */
         #nuptk-card-app .inF {
             --iB: var(--bodyB);
             --iC: inherit;
@@ -581,4 +580,3 @@
             content: '\0021';
             color: #e74c3c;
         }
-    </style>
