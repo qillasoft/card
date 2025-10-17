@@ -191,7 +191,7 @@
             margin-bottom: 20px;
         }
         
-        #nuptk-card-app label {
+        #nuptk-card-app .form-group label {
             display: block;
             margin-bottom: 8px;
             font-size: 16px;           
