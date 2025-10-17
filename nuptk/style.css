@@ -197,7 +197,7 @@
             font-size: 16px;           
         }
         
-        #nuptk-card-app input, #nuptk-card-app select {
+        #nuptk-card-app .form-group input, #nuptk-card-app .form-group select {
             font-size: 14px;
             color: #424242;
             width: 100%;
@@ -207,7 +207,7 @@
             transition: border-color 0.3s;
         }
         
-        #nuptk-card-app input:focus, #nuptk-card-app select:focus {
+        #nuptk-card-app .form-group input:focus, #nuptk-card-app .form-group select:focus {
             outline: none;
             border-color: var(--primary-color);
             box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
