@@ -1,0 +1,582 @@
+/* Input field */
+        #nuptk-card-app .inF {
+            --iB: var(--bodyB);
+            --iC: inherit;
+            --iL: var(--contentLa);
+            --iLa: var(--linkC);
+            --iLe: #d93025;
+            --iLi: #3e954e;
+            --iR: 5px;
+            --tH: 100px;
+            --tHa: 200px;
+            --tHm: 500px;
+            position: relative;
+            font-size: 14px;
+            margin: 20px 0;
+        }
+        
+        #nuptk-card-app .inF input, #nuptk-card-app .inF select, #nuptk-card-app .inF textarea {
+            display: block;
+            width: 100%;
+            height: 50px;
+            outline: 0;
+            font-size: 14px;
+            padding: 16px 12px;
+            text-align: start;
+            border-radius: var(--iR);
+            background: var(--iB);
+            color: var(--iC);
+            border: 1px solid var(--iL);
+            transition: border .2s ease,box-shadow .2s ease;
+        }
+        
+        #nuptk-card-app .inF select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+            cursor: pointer;
+        }
+        
+        #nuptk-card-app .inF textarea {
+            vertical-align: top;
+            resize: vertical;
+            min-height: 60px;
+            max-height: var(--tHm);
+            height: var(--tH);
+            transition: border .2s ease, box-shadow .2s ease, height .2s ease;
+            margin: 0;
+        }
+        
+        #nuptk-card-app .inF textarea:focus, #nuptk-card-app .inF textarea:not(:placeholder-shown):not(:focus) {
+            height: var(--tHa);
+        }
+        
+        #nuptk-card-app .inF input[type=date]::-webkit-date-and-time-value, #nuptk-card-app .inF input[type=datetime-local]::-webkit-date-and-time-value {
+            margin-top: 0;
+            text-align: start;
+            width: 100%;
+        }
+        
+        #nuptk-card-app .inF input[type=date]::after, #nuptk-card-app .inF input[type=datetime-local]::after {
+            content: '';
+            position: absolute;
+            top: 18px;
+            inset-inline-end: 3px;
+            width: 12px;
+            height: 16px;
+            background: inherit;
+        }
+        
+        #nuptk-card-app .inF input:not([readonly]):focus, #nuptk-card-app .inF select:not([readonly]):focus, #nuptk-card-app .inF textarea:not([readonly]):focus {
+            border-color: var(--iLa);
+            box-shadow: inset 0 0 0 .5px var(--iLa);
+        }
+        
+        #nuptk-card-app .inF input:placeholder-shown, #nuptk-card-app .inF label, #nuptk-card-app .inF textarea:placeholder-shown {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        #nuptk-card-app .inF input:not(:placeholder-shown), #nuptk-card-app .inF select:not(:placeholder-shown), #nuptk-card-app .inF textarea:not(:placeholder-shown), #nuptk-card-app .inF input[type=date], #nuptk-card-app .inF input[type=datetime-local] {
+            border-color: var(--iLa);
+        }
+        
+        #nuptk-card-app .inF label {
+            font-size: 14px;
+            position: absolute;
+            top: 17px;
+            inset-inline-start: 10px;
+            padding: 0 4px;
+            background-color: var(--iB);
+            color: var(--iC);
+            line-height: 1.25;
+            max-width: calc(100% - 18px);
+            opacity: .8;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            transition: inset .15s cubic-bezier(.4,0,.2,1), opacity .15s cubic-bezier(.4,0,.2,1), font-size .15s ease,color .2s ease;
+            cursor: text;
+            pointer-events: none;
+        }
+        
+        #nuptk-card-app .inF input[required] ~ label::after, #nuptk-card-app .inF select[required] ~ label::after, #nuptk-card-app .inF textarea[required] ~ label::after {
+            content: '*';
+            color: #cb5151;
+            margin-inline-start: 4px;
+        }
+        
+        #nuptk-card-app .inF input:not([readonly]):focus ~ label, #nuptk-card-app .inF select:not([readonly]):focus ~ label, #nuptk-card-app .inF textarea:not([readonly]):focus ~ label, #nuptk-card-app .inF input:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card-app .inF select:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card-app .inF textarea:not(:placeholder-shown):not(:focus) ~ label, #nuptk-card-app .inF input[readonly]:not(:placeholder-shown) ~ label, #nuptk-card-app .inF select[readonly]:not(:placeholder-shown) ~ label, #nuptk-card-app .inF textarea[readonly]:not(:placeholder-shown) ~ label {
+            opacity: 1;
+            top: -6px;
+            inset-inline-start: 8px;
+            font-size: 11px;
+            color: var(--iLa);
+        }
+        
+        #nuptk-card-app .inF[data-error]:not([data-error='']) {
+            --iL: var(--iLe);
+            --iLa: var(--iLe);
+            animation: shake-input-error .35s ease;
+        }
+        
+        #nuptk-card-app .inF[data-info]:not([data-info='']) {
+            --iL: var(--iLi);
+            --iLa: var(--iLi);
+        }
+        
+        #nuptk-card-app .inF[data-error]:not([data-error=''])::after, #nuptk-card-app .inF[data-info]:not([data-info=''])::after, #nuptk-card-app .inF[data-message]:not([data-message=''])::after {
+            content: attr(data-message);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            font-size: 13px;
+            line-height: 1.25;
+            margin-top: 8px;
+            opacity: .8;
+            overflow: hidden;
+        }
+        
+        #nuptk-card-app .inF[data-error]:not([data-error=''])::after {
+            content: attr(data-error);
+            color: var(--iLe);
+        }
+        
+        #nuptk-card-app .inF[data-info]:not([data-info=''])::after {
+            content: attr(data-info);
+            color: var(--iLi);
+        }
+        
+        @keyframes shake-input-error {
+            25% {
+                transform: translateX(4px);
+            }
+            50% {
+                transform: translateX(-4px);
+            }
+            75% {
+                transform: translateX(4px);
+            }
+        }
+        
+        
+        #nuptk-card-app {
+            --primary-color: #27ae60;
+            --danger-color: #e74c3c;
+            --gray-color: #95a5a6;
+            --border-color: #ddd;
+        }
+        
+        #nuptk-card-app .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            background: transparent;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(150,150,150,0.2);
+            overflow: hidden;
+        }
+        
+         #nuptk-card-app .form-section, #nuptk-card-app .preview-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        
+        #nuptk-card-app .form-group {
+            margin-bottom: 20px;
+        }
+        
+        #nuptk-card-app label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;           
+        }
+        
+        #nuptk-card-app .form-group input, #nuptk-card-app .form-group select {
+            font-size: 14px;
+            color: #424242;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        
+        #nuptk-card-app .form-group input:focus, #nuptk-card-app .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(39, 174, 96, 0.2);
+        }        
+        
+        #nuptk-card-app .upload-area {
+            border: 2px dashed var(--border-color);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        #nuptk-card-app .upload-area:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(39, 174, 96, 0.05);
+        }
+        
+        #nuptk-card-app .upload-area.dragover {
+            border-color: var(--primary-color);
+            background-color: rgba(39, 174, 96, 0.1);
+        }
+        
+        #nuptk-card-app .txtupl {
+            font-size: 14px;
+        }
+        
+        #nuptk-card-app .file-info {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+        
+        #nuptk-card-app .file-error {
+            font-size: 14px;
+            color: var(--danger-color);
+        }
+        
+        #nuptk-card-app .preview-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #nuptk-card-app .jdlpreview {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            text-align: center;
+        }
+        
+        #nuptk-card-app #cardPreview {
+            width: 320px;
+            height: 200px;
+            border: 1px solid var(--gray-color);
+            padding: 5px;
+            background-image: url('img/nuptk_front.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            color: #000000;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 8px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .card-photo {
+            width: 71px;
+            height: 107px;
+            object-fit: cover;
+            position: absolute;
+            left: 14.4px;
+            bottom: 16.5px;
+        }
+        
+        #nuptk-card-app .data-container {
+            margin-top: 85px;
+            margin-left: 93px;
+            margin-right: 4.5px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .data-row-nuptk {
+            display: flex;
+            margin-bottom: 4px;
+            font-size: 10px;
+            font-weight: bold;
+            line-height: 1.3;
+            align-items: center;
+            overflow: hidden;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .data-row {
+            display: flex;
+            margin-bottom: 4px;
+            font-size: 10px;
+            line-height: 1.3;
+            align-items: center;
+            overflow: hidden;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .data-label {
+            width: 70px;
+            text-align: left;
+            color: #000000;
+            flex-shrink: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .data-colon {
+            width: 5px;
+            color: #000000;
+            flex-shrink: 0;
+            margin-right: 2px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .data-value {
+            color: #000000;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            min-width: 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        #nuptk-card-app .empty-state {
+            color: #757575;
+            font-size: 9px;
+            font-style: italic;
+        }
+        
+        #nuptk-card-app .long-text {
+            font-size: 9px !important;
+        }
+        
+        #nuptk-card-app .very-long-text {
+            font-size: 8px !important;
+        }
+        
+        #nuptk-card-app .qrcode {
+            width: 41px;
+            height: 41px;
+            border: 1px solid var(--border-color);
+            position: absolute;
+            right: 7px;
+            bottom: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+        
+        #nuptk-card-app .qrcode canvas {
+            width: 41px !important;
+            height: 41px !important;
+        }
+        
+        #nuptk-card-app .back-preview-section {
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        #nuptk-card-app #cardBackPreview {
+            width: 320px;
+            height: 200px;
+            border: 1px solid var(--gray-color);
+            padding: 5px;
+            background-image: url('img/nuptk_back.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            position: relative;
+            border-radius: 8px;
+        }
+        
+        #nuptk-card-app .ftrpreview {
+            display: block;
+            font-size: 14px;
+            color: #00B8D4;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .button-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        #nuptk-card-app .btn-crop {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            min-width: 120px;
+            background: #0091EA;
+            color: white;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .btn-crop:enabled:hover {
+            background: #2962FF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        #nuptk-card-app .btn-crop:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+            background: var(--gray-color);
+        }
+        
+        #nuptk-card-app .btn-clear {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            min-width: 120px;
+            background: #F25A5A;
+            color: white;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .btn-clear:hover {
+            background-color: #D32F2F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        #nuptk-card-app .btn-download {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            min-width: 200px;
+            background: #7C4DFF;
+            color: white;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .btn-download:enabled:hover {
+            background: #6200EA;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        #nuptk-card-app .btn-download:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+            background: var(--gray-color);
+        }
+        
+        /* Loading indicator */
+        #nuptk-card-app .loading {
+            display: none;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        #nuptk-card-app .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        /* Peringatan ukuran foto */
+        #nuptk-card-app .photo-size-warning {
+            color: var(--danger-color);
+            font-size: 14px;
+            display: none;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(231, 76, 60, 0.1);
+            border-radius: 5px;
+            border-left: 4px solid var(--danger-color);
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+           
+        #nuptk-card-app .validation-message {
+            font-size: 14px;
+            display: none;
+        }
+        
+        #nuptk-card-app .validation-error {
+            color: var(--danger-color);
+        }
+        
+        #nuptk-card-app .validation-success {
+            color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            #nuptk-card-app .content-wrapper {
+                flex-direction: column;
+            }
+            
+            #nuptk-card-app .form-section, #nuptk-card-app .preview-section {
+                width: 100%;
+            }
+        }
+        
+        #nuptk-card-app .infoa {
+            text-align: justify;
+            background: rgba(255,255,255,0.1);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 0 auto;
+            border-left: 4px solid #7C4DFF;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Note */
+        #nuptk-card-app .info {
+            position: relative;
+            padding-block: 16px;
+            padding-inline: 50px 20px;
+            background: rgba(250,150,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            line-height: 1.6em;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .info::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background: rgba(0,0,0,1);
+            display: block;
+            border-radius: 50%;
+            position: absolute;
+            top: -12px;
+            inset-inline-start: -12px;
+            opacity: .1;
+        }
+        
+        #nuptk-card-app .info::after {
+            content: '\002A';
+            position: absolute;
+            inset-inline-start: 18px;
+            top: 16px;
+            font-size: 20px;
+            min-width: 15px;
+            text-align: center;
+        }
+        
+        #nuptk-card-app .info.wr::after {
+            content: '\0021';
+            color: #e74c3c;
+        }
