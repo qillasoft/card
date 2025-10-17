@@ -263,7 +263,7 @@
             height: 200px;
             border: 1px solid var(--gray-color);
             padding: 5px;
-            background-image: url('img/nuptk_front.jpg');
+            background-image: url('img/nrg_front.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -379,7 +379,7 @@
             height: 200px;
             border: 1px solid var(--gray-color);
             padding: 5px;
-            background-image: url('img/nuptk_back.jpg');
+            background-image: url('img/nrg_back.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
