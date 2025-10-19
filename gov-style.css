@@ -30,7 +30,7 @@
 #cardBackPreviewNUPTK {background-image: url('nuptk/img/nuptk_back.jpg')}
 #cardBackPreviewNRG {background-image: url('nrg/img/nrg_back.jpg')}
 #cardBackPreviewNISN {background-image: url('nisn/img/nisn_back.jpg')}
-#cardBackPreviewNISNfoto {background-image: url('nisn/img/nisnfoto_back.jpg')}
+#cardBackPreviewNISNfoto {background-image: url('https://cdn.jsdelivr.net/gh/qillasoft/card@master/nisn/img/nisnfoto_back.jpg')}
 
 .content-wrapper {
     display: flex;
