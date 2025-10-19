@@ -24,7 +24,7 @@
 }
 #cardPreviewNUPTK {background-image: url('nuptk/img/nuptk_front.jpg')}
 #cardPreviewNRG {background-image: url('nrg/img/nrg_front.jpg')}
-#cardPreviewNISN {background-image: url('nisn/img/nisn_front.jpg')}
+#cardPreviewNISN {background-image: url('#')}
 #cardPreviewNISNfoto {background-image: url('nisn/img/nisnfoto_front.jpg')}
 
 #cardBackPreviewNUPTK {background-image: url('nuptk/img/nuptk_back.jpg')}
