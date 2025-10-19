@@ -5,7 +5,7 @@
     --border-color: #ddd;
 }
 
-#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNUISNfoto, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN, #cardBackPreviewNISNfoto {
+#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN, #cardBackPreviewNISNfoto {
     position: relative;
     width: 320px;
     height: 200px;
@@ -18,7 +18,7 @@
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNUISNfoto {
+#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto {
     color: #000000;
     font-family: Helvetica, Arial, sans-serif;
 }
