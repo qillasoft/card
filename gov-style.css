@@ -5,7 +5,7 @@
     --border-color: #ddd;
 }
 
-#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN, #cardBackPreviewNISNfoto {
+#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto1, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN, #cardBackPreviewNISNfoto {
     position: relative;
     width: 320px;
     height: 200px;
