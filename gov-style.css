@@ -1,3 +1,4 @@
+<style>
 :root {
     --primary-color: #27ae60;
     --danger-color: #e74c3c;
@@ -439,3 +440,4 @@
     content: '\0021';
     color: #e74c3c;
 }
+</style>
