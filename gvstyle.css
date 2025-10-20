@@ -5,7 +5,7 @@
     --border-color: #ddd;
 }
 
-#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN, #cardBackPreviewNISNfoto {
+#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardBackPreviewNUPTK, #cardBackPreviewNRG, #cardBackPreviewNISN {
     position: relative;
     width: 320px;
     height: 200px;
@@ -18,19 +18,17 @@
     box-sizing: border-box;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN, #cardPreviewNISNfoto {
+#cardPreviewNUPTK, #cardPreviewNRG, #cardPreviewNISN {
     color: #000000;
     font-family: Helvetica, Arial, sans-serif;
 }
-#cardPreviewNUPTK {background-image: url('nuptk/img/nuptk_front.jpg')}
-#cardPreviewNRG {background-image: url('nrg/img/nrg_front.jpg')}
-#cardPreviewNISN {background-image: url('#')}
-#cardPreviewNISNfoto {background-image: url('nisn/img/nisnfoto_front.jpg')}
+#cardPreviewNUPTK {background-image: url('nuptk/nuptk_front.jpg')}
+#cardPreviewNRG {background-image: url('nrg/nrg_front.jpg')}
+#cardPreviewNISN {background-image: url('nrg/nisn_front.jpg')}
 
-#cardBackPreviewNUPTK {background-image: url('nuptk/img/nuptk_back.jpg')}
-#cardBackPreviewNRG {background-image: url('nrg/img/nrg_back.jpg')}
-#cardBackPreviewNISN {background-image: url('nisn/img/nisn_back.jpg')}
-#cardBackPreviewNISNfoto {background-image: url('nisn/img/nisnfoto_back.jpg')}
+#cardBackPreviewNUPTK {background-image: url('nuptk/nuptk_back.jpg')}
+#cardBackPreviewNRG {background-image: url('nrg/nrg_back.jpg')}
+#cardBackPreviewNISN {background-image: url('nisn/nisn_back.jpg')}
 
 .content-wrapper {
     display: flex;
